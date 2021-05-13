@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page</title>
+</head>
+<body>
+
+<h1>This is test page</h1>
+<ul>
+<!--    but i just comment something to pretend that i doing some thing that i'm not?-->
+    {% for i in testM %}
+    <li style="color:red">{{i.description}}<a style="text-decoration: none; color: black" href="deletetest/{{ i.id }}">Delete</a></li>
+    {% endfor %}
+    {% for j in newM %}
+    <li style="color:blue">{{j}}</li>
+    {% endfor %}
+
+</ul>
+
+</body>
+</html>
+{% endblock %}
